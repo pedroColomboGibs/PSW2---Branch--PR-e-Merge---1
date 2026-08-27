@@ -12,6 +12,15 @@
 </head>
 
 <body>
+
+        <% if (erros && erros.length > 0) { %>
+    <div class="alert alert-danger">
+        <% erros.forEach(erro => { %>
+            <p><%= erro.msg %></p>
+        <% }) %>
+    </div>
+<% } %>
+
     <!-- <div class="navbar navbar-inverse navbar-fixed-top"> -->
             <%- include("../partials/header-adm") -%>
 
